@@ -53,4 +53,25 @@ public class PersonalTrainerService {
         }
         return null;
     }
+    
+    public PersonalTrainer updatePersonalTrainerByID(Long id, PersonalTrainer newPersonalTrainer) {
+        Optional<PersonalTrainer> tempOldPersonalTrainer = personalTrainerRepository.findById(newPersonalTrainer.getId());
+
+        if (tempOldPersonalTrainer.isPresent()) {
+            PersonalTrainer oldPersonalTrainer = tempOldPersonalTrainer.get();
+
+            oldPersonalTrainer.setFirstName(newPersonalTrainer.getFirstName());
+            oldPersonalTrainer.setLastName(newPersonalTrainer.getLastName());
+            oldPersonalTrainer.setDateOfBirth(newPersonalTrainer.getDateOfBirth());
+            oldPersonalTrainer.setWorkStart(newPersonalTrainer.getWorkStart());
+            oldPersonalTrainer.setFiscalCode(newPersonalTrainer.getFiscalCode());
+            oldPersonalTrainer.setTelephoneNumber(newPersonalTrainer.getTelephoneNumber());
+            oldPersonalTrainer.setEmail(newPersonalTrainer.getEmail());
+            oldPersonalTrainer.setCourses(newPersonalTrainer.getCourses());
+
+            personalTrainerRepository.save(newPersonalTrainer);
+
+        }
+        return null;
+    }
 }

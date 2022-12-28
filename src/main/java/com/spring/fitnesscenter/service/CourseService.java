@@ -36,11 +36,25 @@ public class CourseService {
     public void deleteCourseByID(Long id){
         courseRepository.deleteById(id);
     }
+
     public Course updateCourse(Course newCourse){
         Course oldC = findCourseByID(newCourse.getId());
 
         if(oldC != null){
             oldC.setName(newCourse.getName());
+
+            courseRepository.save(newCourse);
+        }
+        return null;
+    }
+    
+    public Course updateCourseByID(Long id,Course newCourse) {
+         Optional<Course> tempOldC = courseRepository.findById(newCourse.getId());
+
+         if(tempOldC.isPresent()){
+            Course oldCourse = tempOldC.get();
+
+            oldCourse.setName(newCourse.getName());
 
             courseRepository.save(newCourse);
         }

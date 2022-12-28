@@ -47,4 +47,19 @@ public class PaymentService {
         }
         return null;
     }
+    
+    public Payment updatePaymentByID(Long id, Payment newPayment) {
+        Optional<Payment> tempOldPayment = paymentRepository.findById(newPayment.getId());
+
+        if (tempOldPayment.isPresent()) {
+            Payment oldPayment = tempOldPayment.get();
+
+            oldPayment.setUsers(newPayment.getUsers());
+            oldPayment.setUserPay(newPayment.getUserPay());
+
+            paymentRepository.save(newPayment);
+
+        }
+        return null;
+    }
 }

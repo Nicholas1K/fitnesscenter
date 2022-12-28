@@ -54,4 +54,25 @@ public class UserService {
         }
         return null;
     }
+    
+    public User updateUserByID(Long id, User newUser) {
+        Optional<User> tempOldUser = userRepository.findById(newUser.getId());
+
+        if (tempOldUser.isPresent()) {
+            User oldUser = tempOldUser.get();
+
+            oldUser.setFirstName(newUser.getFirstName());
+            oldUser.setLastName(newUser.getLastName());
+            oldUser.setDateOfBirth(newUser.getDateOfBirth());
+            oldUser.setFiscalCode(newUser.getFiscalCode());
+            oldUser.setTelephoneNumber(newUser.getTelephoneNumber());
+            oldUser.setEmail(newUser.getEmail());
+            oldUser.setCourse(newUser.getCourse());
+            oldUser.setSubscription(newUser.getSubscription());
+
+            userRepository.save(newUser);
+
+        }
+        return null;
+    }
 }

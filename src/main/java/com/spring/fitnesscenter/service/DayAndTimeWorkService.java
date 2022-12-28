@@ -48,4 +48,20 @@ public class DayAndTimeWorkService {
         }
         return null;
     }
+    
+    public DayAndTimeWork updateDayAndTimeWorkByID(Long id, DayAndTimeWork newDayAndTimeWork) {
+        Optional<DayAndTimeWork> tempOldDay = dayAndTimeWorkRepository.findById(newDayAndTimeWork.getId());
+
+        if (tempOldDay.isPresent()) {
+            DayAndTimeWork oldDayAndTimeWork = tempOldDay.get();
+
+            oldDayAndTimeWork.setCoruse(newDayAndTimeWork.getCoruse());
+            oldDayAndTimeWork.setPersonalTrainers(newDayAndTimeWork.getPersonalTrainers());
+            oldDayAndTimeWork.setTimeTables(newDayAndTimeWork.getTimeTables());
+
+            dayAndTimeWorkRepository.save(newDayAndTimeWork);
+
+        }
+        return null;
+    }
 }

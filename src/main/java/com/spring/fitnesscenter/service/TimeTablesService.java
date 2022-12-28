@@ -48,4 +48,21 @@ public class TimeTablesService {
         }
         return null;
     }
+    
+    public TimeTables updateTimeTablesByID(Long id, TimeTables newTimeTables) {
+        Optional<TimeTables> tempOldTimeTables = timeTablesRepository.findById(newTimeTables.getId());
+
+        if (tempOldTimeTables.isPresent()) {
+            TimeTables oldTimeTables = tempOldTimeTables.get();
+
+            oldTimeTables.setStartTime(newTimeTables.getStartTime());
+            oldTimeTables.setEndTime(newTimeTables.getEndTime());
+            oldTimeTables.setDayOfTheWeek(newTimeTables.getDayOfTheWeek());
+
+            timeTablesRepository.save(newTimeTables);
+            
+
+        }
+        return null;
+    }
 }

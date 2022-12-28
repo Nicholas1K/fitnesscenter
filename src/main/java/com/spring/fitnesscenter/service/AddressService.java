@@ -51,4 +51,23 @@ public class AddressService {
         }
         return null;
     }
+    
+    public Address updateAddressByID(Long id, Address newAddress) {
+        Optional<Address> tempOldA = addressRepository.findById(newAddress.getId());
+
+        if (tempOldA.isPresent()) {
+            Address oldAddress = tempOldA.get();
+            
+            oldAddress.setNation(newAddress.getNation());
+            oldAddress.setRegion(newAddress.getRegion());
+            oldAddress.setCity(newAddress.getCity());
+            oldAddress.setProvince(newAddress.getProvince());
+            oldAddress.setPostalCode(newAddress.getPostalCode());
+            oldAddress.setHomeNumber(newAddress.getHomeNumber());
+
+            addressRepository.save(newAddress);
+           
+        }
+        return null;
+    }
 }

@@ -48,4 +48,20 @@ public class SubscriptionService {
         }
         return null;
     }
+    
+    public Subscription updateSubscriptionByID(Long id, Subscription newSubscription) {
+        Optional<Subscription> tempOldSubscription = subscriptionRepository.findById(newSubscription.getId());
+
+        if (tempOldSubscription.isPresent()) {
+            Subscription oldSubscription = tempOldSubscription.get();
+
+            oldSubscription.setType(newSubscription.getType());
+            oldSubscription.setMonth(newSubscription.getMonth());
+            oldSubscription.setPrice(newSubscription.getPrice());
+
+            subscriptionRepository.save(newSubscription);
+
+        }
+        return null;
+    }
 }

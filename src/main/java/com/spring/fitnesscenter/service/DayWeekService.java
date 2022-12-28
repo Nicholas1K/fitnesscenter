@@ -48,4 +48,20 @@ public class DayWeekService {
         }
         return null;
     }
+    
+    public DayWeek updateDayWeekByID(Long id, DayWeek newDayWeek) {
+        Optional<DayWeek> tempOldDay = dayWeekRepository.findById(newDayWeek.getId());
+
+        if (tempOldDay.isPresent()) {
+            DayWeek oldDayWeek = tempOldDay.get();
+
+            oldDayWeek.setDay(newDayWeek.getDay());
+            oldDayWeek.setlocalDate(newDayWeek.getlocalDate());
+            oldDayWeek.setCourse(newDayWeek.getCourse());
+
+            dayWeekRepository.save(newDayWeek);
+
+        }
+        return null;
+    }
 }
