@@ -20,7 +20,7 @@ import com.spring.fitnesscenter.service.CourseService;
 
 
 @RestController
-@RequestMapping("/api/airport")
+@RequestMapping("/api/course")
 public class CourseController {
 
     @Autowired
