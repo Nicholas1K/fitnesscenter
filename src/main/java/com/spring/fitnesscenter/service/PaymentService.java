@@ -43,7 +43,7 @@ public class PaymentService {
             oldP.setUsers(newPayment.getUsers());
             oldP.setUserPay(newPayment.getUserPay());
             
-            paymentRepository.save(newPayment);
+            paymentRepository.save(oldP);
         }
         return null;
     }
@@ -57,7 +57,7 @@ public class PaymentService {
             oldPayment.setUsers(newPayment.getUsers());
             oldPayment.setUserPay(newPayment.getUserPay());
 
-            paymentRepository.save(newPayment);
+            paymentRepository.save(oldPayment);
 
         }
         return null;

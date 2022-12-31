@@ -49,7 +49,7 @@ public class PersonalTrainerService {
             oldP.setEmail(newPersonalTrainer.getEmail());
             oldP.setCourses(newPersonalTrainer.getCourses());
             
-            personalTrainerRepository.save(newPersonalTrainer);
+            personalTrainerRepository.save(oldP);
         }
         return null;
     }
@@ -69,7 +69,7 @@ public class PersonalTrainerService {
             oldPersonalTrainer.setEmail(newPersonalTrainer.getEmail());
             oldPersonalTrainer.setCourses(newPersonalTrainer.getCourses());
 
-            personalTrainerRepository.save(newPersonalTrainer);
+            personalTrainerRepository.save(oldPersonalTrainer);
 
         }
         return null;

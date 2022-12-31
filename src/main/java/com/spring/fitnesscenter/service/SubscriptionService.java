@@ -44,7 +44,7 @@ public class SubscriptionService {
             oldS.setMonth(newSubscription.getMonth());
             oldS.setPrice(newSubscription.getPrice());
             
-            subscriptionRepository.save(newSubscription);
+            subscriptionRepository.save(oldS);
         }
         return null;
     }
@@ -59,7 +59,7 @@ public class SubscriptionService {
             oldSubscription.setMonth(newSubscription.getMonth());
             oldSubscription.setPrice(newSubscription.getPrice());
 
-            subscriptionRepository.save(newSubscription);
+            subscriptionRepository.save(oldSubscription);
 
         }
         return null;

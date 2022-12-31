@@ -50,7 +50,7 @@ public class UserService {
             oldU.setSubscription(newUser.getSubscription());
 
             
-            userRepository.save(newUser);
+            userRepository.save(oldU);
         }
         return null;
     }
@@ -70,7 +70,7 @@ public class UserService {
             oldUser.setCourse(newUser.getCourse());
             oldUser.setSubscription(newUser.getSubscription());
 
-            userRepository.save(newUser);
+            userRepository.save(oldUser);
 
         }
         return null;

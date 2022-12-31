@@ -43,7 +43,7 @@ public class CourseService {
         if(oldC != null){
             oldC.setName(newCourse.getName());
 
-            courseRepository.save(newCourse);
+            courseRepository.save(oldC);
         }
         return null;
     }
@@ -56,7 +56,7 @@ public class CourseService {
 
             oldCourse.setName(newCourse.getName());
 
-            courseRepository.save(newCourse);
+            courseRepository.save(oldCourse);
         }
         return null;
     }
