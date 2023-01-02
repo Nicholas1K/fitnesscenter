@@ -15,3 +15,5 @@ fitness will be able to: take account of its registered users, their favorite ac
 Este es un programa de gestión de centros de fitness, en este programa el propietario del centro
 fitness podrá: tener en cuenta a sus usuarios registrados, sus actividades favoritas y los paquetes de suscripción que cada usuario individual haya elegido, además, podrá modificar y realizar cambios en el contenido en cualquier momento, en definitiva será fácil para el empresario conocer a sus entrenadores personales, gestionar su jornada laboral en días laborables y laborables, y las actividades gimnásticas que realizan
 
+TODO mettere delle card nella home che inirizzano alla creazione di un nuovo corso/ nuovo personal trainder/ nuovo users
+

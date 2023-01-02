@@ -10,12 +10,12 @@
       integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
       crossorigin="anonymous"
     />
-    <link th:href="@{course.css}" rel="stylesheet" />
-    <title>Course Update</title>
+    <link th:href="@{dayWeek.css}" rel="stylesheet" />
+    <title>Day Week Create</title>
   </head>
 
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light"> <!--navbar-->
+     <nav class="navbar navbar-expand-lg navbar-light bg-light"> <!--navbar-->
       <a class="navbar-brand" href="#">FitnessCenter</a>
       <button
         class="navbar-toggler"
@@ -24,8 +24,7 @@
         data-target="#navbarNav"
         aria-controls="navbarNav"
         aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
+        aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
@@ -34,7 +33,7 @@
             <a class="nav-link" th:href="@{/index}"> Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" th:href="@{/course}">Course <span class="sr-only">(current)</span></a>
+            <a class="nav-link" th:href="@{/dayWeek}">Course <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item active">
             <a class="nav-link" th:href="@{/personalTrainer}">PersonalTrainer <span class="sr-only">(current)</span></a>
@@ -48,13 +47,19 @@
     <br>
     <div class="container">
       <div class="row">
-        <div class="col-sm-1 col-md-5 container justify-content-center card">
-            <h1 class="text-center">Course Update</h1>
+        <div class="container justify-content-center card">
+            <h1 class="text-center">Day Week Create</h1>
             <div class="card-body">
                 <div>
-                <form action="#" th:action="@{/course/{id}(id=${course.id})}" th:object="${course}" method="post">
-                    <label>Name:</label>
-                    <input type="text"name="name"th:object="${course}" class="form-control" placeholder="insert name course">
+                <form action="#" th:action="@{/dayWeek/create}" th:object="${dayWeek}" method="post">
+                    <label>Day:</label>
+                    <input type="number"name="Day"th:object="${dayWeek}" class="form-control" placeholder="insert Day">
+                    <br>
+                    <label>Local Date:</label>
+                    <input type="local-date"name="Local Date"th:object="${dayWeek}" class="form-control" placeholder="insert Local Date">
+                    <br>
+                    <label>Curse:</label>
+                    <input type="number"name="Curse"th:object="${dayWeek}" class="form-control" placeholder="Curse">
                     <br>
                     <div class="box-footer">
                     <input type="submit" value="save" class="bg-primary text-white">
