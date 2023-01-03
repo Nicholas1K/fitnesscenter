@@ -23,7 +23,7 @@ public class PersonalTrainer {
     private String firstName;
 
     @Column
-    private String LastName;
+    private String lastName;
 
     @Column
     @DateTimeFormat(pattern = "yyyy-MM-dd")
@@ -51,7 +51,7 @@ public class PersonalTrainer {
     public PersonalTrainer(String firstName, String lastName, LocalDate dateOfBirth, LocalDate workStart,
             String fiscalCode, String telephoneNumber, String email, List<Course> courses) {
         this.firstName = firstName;
-        LastName = lastName;
+        this.lastName = lastName;
         this.dateOfBirth = dateOfBirth;
         this.workStart = workStart;
         this.fiscalCode = fiscalCode;
@@ -77,11 +77,11 @@ public class PersonalTrainer {
     }
 
     public String getLastName() {
-        return LastName;
+        return lastName;
     }
 
     public void setLastName(String lastName) {
-        LastName = lastName;
+        this.lastName = lastName;
     }
 
     public LocalDate getDateOfBirth() {
