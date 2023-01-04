@@ -132,5 +132,10 @@ public class PersonalTrainer {
         this.courses = courses;
     }
 
+    @Override
+    public String toString() {
+        return id + " " + firstName + " " + lastName;
+    }
+
     
 }

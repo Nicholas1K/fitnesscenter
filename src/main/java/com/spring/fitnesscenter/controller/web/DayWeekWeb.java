@@ -61,8 +61,8 @@ public class DayWeekWeb {
         DayWeek oldDayWeek = dayWeekService.findDayWeekByID(id);
         
         oldDayWeek.setDay(dayWeek.getDay());
-        oldDayWeek.setlocalDate(dayWeek.getlocalDate());
-        oldDayWeek.setCourse(dayWeek.getCourse());
+        oldDayWeek.setcurrentDay(dayWeek.getcurrentDay());
+        oldDayWeek.setCourses(dayWeek.getCourses());
 
         dayWeekService.updateDayWeek(oldDayWeek);
         return "redirect:/dayWeek";

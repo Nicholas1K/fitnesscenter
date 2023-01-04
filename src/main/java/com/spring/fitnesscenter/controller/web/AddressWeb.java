@@ -43,7 +43,7 @@ public class AddressWeb {
     @PostMapping("/address/create")
     public String insertAddress(@ModelAttribute("address") Address address){
         addressService.saveAddress(address);
-        return"redirect:/address";
+        return"redirect:/index";
     }
 
     //metodo Get che ritorna la tabella per modificare un address

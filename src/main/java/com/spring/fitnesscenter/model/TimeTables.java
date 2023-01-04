@@ -66,5 +66,10 @@ public class TimeTables { // orari
         this.dayOfTheWeek = dayOfTheWeek;
     }
 
+    @Override
+    public String toString() {
+        return + id + ", start = " + startTime + ", end = " + endTime + dayOfTheWeek;
+    }
+
     
 }

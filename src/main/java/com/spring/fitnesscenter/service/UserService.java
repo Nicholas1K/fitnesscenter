@@ -46,7 +46,7 @@ public class UserService {
             oldU.setFiscalCode(newUser.getFiscalCode());
             oldU.setTelephoneNumber(newUser.getTelephoneNumber());
             oldU.setEmail(newUser.getEmail());
-            oldU.setCourse(newUser.getCourse());
+            oldU.setCourses(newUser.getCourses());
             oldU.setSubscription(newUser.getSubscription());
 
             
@@ -67,7 +67,7 @@ public class UserService {
             oldUser.setFiscalCode(newUser.getFiscalCode());
             oldUser.setTelephoneNumber(newUser.getTelephoneNumber());
             oldUser.setEmail(newUser.getEmail());
-            oldUser.setCourse(newUser.getCourse());
+            oldUser.setCourses(newUser.getCourses());
             oldUser.setSubscription(newUser.getSubscription());
 
             userRepository.save(oldUser);

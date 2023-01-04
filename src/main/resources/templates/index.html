@@ -1,63 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
-      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
-      crossorigin="anonymous"
-    />
-    <link th:href="@{....classeCssCustom}" rel="stylesheet" />
-    <title>Home</title>
-  </head>
-  <body>
-     <nav class="navbar navbar-expand-lg navbar-light bg-light"> <!--navbar-->
-      <a class="navbar-brand" href="#">FitnessCenter</a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarNav"
-        aria-controls="navbarNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item active">
-            <a class="nav-link" th:href="@{/index}"> Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" th:href="@{/course}">Course <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="#">PersonalTrainer <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="#">User <span class="sr-only">(current)</span></a>
-          </li>
-        </ul>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous" />
+  <link th:href="@{....classeCssCustom}" rel="stylesheet" />
+  <title>Home</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <!--navbar-->
+    <a class="navbar-brand" href="#">FitnessCenter</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" th:href="@{/index}">
+            Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" th:href="@{/course}">Course <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" th:href="@{/personalTrainer}">PersonalTrainer <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" th:href="@{/user}">User <span class="sr-only">(current)</span></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container">
+    <h1 class="text-center">Welcom to Fitness Center</h1>
+  </div>
+  <br />
+  <div>
+    <p class="text-center">
+      With this program you can easily manage your Fitness Center,
+      you will have everything within reach of a simple click ...
+    </p>
+  </div>
+  <br>
+  <br>
+  <br>
+  <div class="container"> <!--CARD-->
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="card text-center">
+          <div class="card-body">
+            <h5 class="card-title">New Course</h5>
+            <p class="card-text">In this section you can create your new Course</p>
+            <a th:href="@{/course/create}" class="btn btn-primary">Create</a>
+          </div>
+        </div>
       </div>
-    </nav>
-    <div>
-      <h1>Welcom to Fitness Center</h1>
-    <div>
-      <p>
-        inserire un testo che parli della palestra o frasi motivazionali
-      </p>
-    <script
-      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      <div class="col-sm-4">
+        <div class="card text-center">
+          <div class="card-body">
+            <h5 class="card-title">New Personal Trainer</h5>
+            <p class="card-text">In this section you can create your new Personal Trainer</p>
+            <a th:href="@{/personalTrainer/create}" class="btn btn-primary">Create</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="card text-center">
+          <div class="card-body">
+            <h5 class="card-title">New User</h5>
+            <p class="card-text">In this section you can create your new User</p>
+            <a th:href="@{/user/create}" class="btn btn-primary">Create</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div> <!--wiev organization-->
+      <div class="card">
+        <h5 class="card-header text-center">Work view organization</h5>
+        <div class="card-body">
+          <p class="card-text text-center">Here you will be able to view all the interfaces for organizing your work and the work of your employees</p>
+          <div class="text-center">
+          <a th:href="@{/subscription}" class="btn btn-primary">Subscription</a>
+          <a th:href="@{/dayWeek}" class="btn btn-primary">Day Week</a>
+          <a th:href="@{/timeTables}" class="btn btn-primary">Time Tables</a>
+          <a th:href="@{/dayAndTimeWork}" class="btn btn-primary">Day and time work</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+      crossorigin="anonymous"></script>
+</body>
 </html>

@@ -116,11 +116,11 @@ public class User {
         this.email = email;
     }
 
-    public List<Course> getCourse() {
+    public List<Course> getCourses() {
         return course;
     }
 
-    public void setCourse(List<Course> course) {
+    public void setCourses(List<Course> course) {
         this.course = course;
     }
 

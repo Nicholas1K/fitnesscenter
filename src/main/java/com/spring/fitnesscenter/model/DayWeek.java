@@ -10,7 +10,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
+import jakarta.persistence.ManyToMany;
 
 @Entity
 public class DayWeek {
@@ -23,18 +23,18 @@ public class DayWeek {
 
     @Column
     @DateTimeFormat(pattern = "yyyy-MM-dd")
-    private LocalDate localDate;
+    private LocalDate currentDay;
 
-    @OneToMany
-    private List<Course> course;
+    @ManyToMany
+    private List<Course> courses;
 
     public DayWeek() {
     }
 
-    public DayWeek(String day, LocalDate localDate, List<Course> course) {
+    public DayWeek(String day, LocalDate currentDay, List<Course> courses) {
         this.day = day;
-        this.localDate = localDate;
-        this.course = course;
+        this.currentDay = currentDay;
+        this.courses = courses;
     }
 
     public Long getId() {
@@ -53,20 +53,25 @@ public class DayWeek {
         this.day = day;
     }
 
-    public LocalDate getlocalDate() {
-        return localDate;
+    public LocalDate getcurrentDay() {
+        return currentDay;
     }
 
-    public void setlocalDate(LocalDate localDate) {
-        this.localDate = localDate;
+    public void setcurrentDay(LocalDate currentDay) {
+        this.currentDay = currentDay;
     }
 
-    public List<Course> getCourse() {
-        return course;
+    public List<Course> getCourses() {
+        return courses;
     }
 
-    public void setCourse(List<Course> course) {
-        this.course = course;
+    public void setCourses(List<Course> courses) {
+        this.courses = courses;
+    }
+
+    @Override
+    public String toString() {
+        return day;
     }
 
     

@@ -43,7 +43,7 @@ public class PaymentWeb {
     @PostMapping("/payment/create")
     public String insertPayment(@ModelAttribute("payment") Payment payment){
         paymentService.savePayment(payment);
-        return"redirect:/payment";
+        return"redirect:/address/create";
     }
 
     //metodo Get che ritorna la tabella per modificare un payment

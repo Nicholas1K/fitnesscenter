@@ -63,5 +63,10 @@ public class Subscription {
         this.price = price;
     }
 
+    @Override
+    public String toString() {
+        return type + " " + month;
+    }
+
     
 }

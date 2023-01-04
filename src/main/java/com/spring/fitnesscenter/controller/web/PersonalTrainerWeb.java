@@ -43,7 +43,7 @@ public class PersonalTrainerWeb {
     @PostMapping("/personalTrainer/create")
     public String insertPersonalTrainer(@ModelAttribute("personalTrainer") PersonalTrainer personalTrainer){
         personalTrainerService.savePersonalTrainer(personalTrainer);
-        return"redirect:/personalTrainer";
+        return"redirect:/address/create";
     }
 
     //metodo Get che ritorna la tabella per modificare un personalTrainer

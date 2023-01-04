@@ -43,7 +43,7 @@ public class UserWeb {
     @PostMapping("/user/create")
     public String insertUser(@ModelAttribute("user") User user){
         userService.saveUser(user);
-        return"redirect:/user";
+        return"redirect:/payment/create";
     }
 
     //metodo Get che ritorna la tabella per modificare un user
@@ -66,7 +66,7 @@ public class UserWeb {
         oldUser.setFiscalCode(user.getFiscalCode());
         oldUser.setTelephoneNumber(user.getTelephoneNumber());
         oldUser.setEmail(user.getEmail());
-        oldUser.setCourse(user.getCourse());
+        oldUser.setCourses(user.getCourses());
         oldUser.setSubscription(user.getSubscription());
 
         userService.updateUser(oldUser);

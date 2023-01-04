@@ -74,7 +74,7 @@
               <tbody>
                 <tr th:each="dayAndTimeWork : ${dayAndTimeWork}">
                   <td scope="col" th:text="${dayAndTimeWork.getId()}">Id</td>
-                  <td scope="col" th:text="${dayAndTimeWork.getCourse()}">Course</td>
+                  <td scope="col" th:text="${dayAndTimeWork.getCoruse()}">Course</td>
                   <td scope="col" th:text="${dayAndTimeWork.getTimeTables()}">Time Table</td>
                   <td scope="col" th:text="${dayAndTimeWork.getPersonalTrainers()}">Personal Trainer</td>
                   <td>
@@ -93,6 +93,7 @@
                 </tr>
               </tbody>
             </table>
+            <a th:href="@{/dayAndTimeWork/create}" class="btn btn-primary">Create</a>
           </div>
         </div>
       </div>

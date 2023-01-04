@@ -41,8 +41,8 @@ public class DayWeekService {
 
         if(oldD != null){
             oldD.setDay(newDayWeek.getDay());
-            oldD.setlocalDate(newDayWeek.getlocalDate());
-            oldD.setCourse(newDayWeek.getCourse());
+            oldD.setcurrentDay(newDayWeek.getcurrentDay());
+            oldD.setCourses(newDayWeek.getCourses());
             
             dayWeekRepository.save(oldD);
         }
@@ -56,8 +56,8 @@ public class DayWeekService {
             DayWeek oldDayWeek = tempOldDay.get();
 
             oldDayWeek.setDay(newDayWeek.getDay());
-            oldDayWeek.setlocalDate(newDayWeek.getlocalDate());
-            oldDayWeek.setCourse(newDayWeek.getCourse());
+            oldDayWeek.setcurrentDay(newDayWeek.getcurrentDay());
+            oldDayWeek.setCourses(newDayWeek.getCourses());
 
             dayWeekRepository.save(oldDayWeek);
 

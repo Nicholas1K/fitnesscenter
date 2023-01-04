@@ -63,13 +63,13 @@
                 <div>
                 <form action="#" th:action="@{/dayWeek/create}" th:object="${dayWeek}" method="post">
                     <label>Day:</label>
-                    <input type="number"name="Day"th:object="${dayWeek}" class="form-control" placeholder="insert Day">
+                    <input type="text"name="day"th:object="${dayWeek}" class="form-control" placeholder="insert Day">
                     <br>
-                    <label>Local Date:</label>
-                    <input type="local-date"name="Local Date"th:object="${dayWeek}" class="form-control" placeholder="insert Local Date">
+                    <label>Local Date "yyyy-MM-dd":</label>
+                    <input type="local-date"name="currentDay"th:object="${dayWeek}" class="form-control" placeholder="insert Local Date">
                     <br>
                     <label>Curse:</label>
-                    <input type="number"name="Curse"th:object="${dayWeek}" class="form-control" placeholder="Curse">
+                    <input type="number"name="courses"th:object="${dayWeek}" class="form-control" placeholder="Curse">
                     <br>
                     <div class="box-footer">
                     <input type="submit" value="save" class="bg-primary text-white">
