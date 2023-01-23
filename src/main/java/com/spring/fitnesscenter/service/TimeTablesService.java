@@ -44,7 +44,7 @@ public class TimeTablesService {
             oldT.setEndTime(newTimeTables.getEndTime());
             oldT.setDayOfTheWeek(newTimeTables.getDayOfTheWeek());
             
-            timeTablesRepository.save(oldT);
+            return timeTablesRepository.save(oldT);
         }
         return null;
     }
@@ -59,7 +59,7 @@ public class TimeTablesService {
             oldTimeTables.setEndTime(newTimeTables.getEndTime());
             oldTimeTables.setDayOfTheWeek(newTimeTables.getDayOfTheWeek());
 
-            timeTablesRepository.save(oldTimeTables);
+            return timeTablesRepository.save(oldTimeTables);
             
 
         }

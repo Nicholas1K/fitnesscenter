@@ -44,7 +44,7 @@ public class DayWeekService {
             oldD.setcurrentDay(newDayWeek.getcurrentDay());
             oldD.setCourses(newDayWeek.getCourses());
             
-            dayWeekRepository.save(oldD);
+            return dayWeekRepository.save(oldD);
         }
         return null;
     }
@@ -59,7 +59,7 @@ public class DayWeekService {
             oldDayWeek.setcurrentDay(newDayWeek.getcurrentDay());
             oldDayWeek.setCourses(newDayWeek.getCourses());
 
-            dayWeekRepository.save(oldDayWeek);
+            return dayWeekRepository.save(oldDayWeek);
 
         }
         return null;

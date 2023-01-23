@@ -44,7 +44,7 @@ public class DayAndTimeWorkService {
             oldDay.setPersonalTrainers(newDayAndTimeWork.getPersonalTrainers());
             oldDay.setTimeTables(newDayAndTimeWork.getTimeTables());
             
-            dayAndTimeWorkRepository.save(oldDay);
+            return dayAndTimeWorkRepository.save(oldDay);
         }
         return null;
     }
@@ -59,7 +59,7 @@ public class DayAndTimeWorkService {
             oldDayAndTimeWork.setPersonalTrainers(newDayAndTimeWork.getPersonalTrainers());
             oldDayAndTimeWork.setTimeTables(newDayAndTimeWork.getTimeTables());
 
-            dayAndTimeWorkRepository.save(oldDayAndTimeWork);
+            return dayAndTimeWorkRepository.save(oldDayAndTimeWork);
 
         }
         return null;

@@ -47,7 +47,7 @@ public class AddressService {
             oldA.setPostalCode(newAddress.getPostalCode());
             oldA.setHomeNumber(newAddress.getHomeNumber());
             
-            addressRepository.save(oldA);
+            return addressRepository.save(oldA);
         }
         return null;
     }
@@ -65,7 +65,7 @@ public class AddressService {
             oldAddress.setPostalCode(newAddress.getPostalCode());
             oldAddress.setHomeNumber(newAddress.getHomeNumber());
 
-            addressRepository.save(oldAddress);
+            return addressRepository.save(oldAddress);
            
         }
         return null;
