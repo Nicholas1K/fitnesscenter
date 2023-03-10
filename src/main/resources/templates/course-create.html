@@ -51,14 +51,14 @@
             <h1 class="text-center">Course Create</h1>
             <div class="card-body">
                 <div>
-                <form action="#" th:action="@{/course/create}" th:object="${course}" method="post">
-                    <label>Name:</label>
-                    <input type="text"name="name"th:object="${course}" class="form-control" placeholder="insert name course">
-                    <br>
-                    <div class="box-footer">
-                    <input type="submit" value="save" class="bg-primary text-white">
-                </form>
-                </div>
+                    <form action="#" th:action="@{/course/create}" th:object="${course}" method="post">
+                      <label>Name:</label>
+                      <input type="text"name="name"th:object="${course}" class="form-control" placeholder="insert name course">
+                      <br>
+                      <div class="box-footer">
+                        <input type="submit" value="save" class="bg-primary text-white">
+                    </form>
+                      </div>
                 </div>
             </div>
         </div>
