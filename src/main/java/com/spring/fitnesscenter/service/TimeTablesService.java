@@ -43,6 +43,7 @@ public class TimeTablesService {
             oldT.setStartTime(newTimeTables.getStartTime());
             oldT.setEndTime(newTimeTables.getEndTime());
             oldT.setDayOfTheWeek(newTimeTables.getDayOfTheWeek());
+            oldT.setCourse(newTimeTables.getCourse());
             
             return timeTablesRepository.save(oldT);
         }
@@ -58,6 +59,7 @@ public class TimeTablesService {
             oldTimeTables.setStartTime(newTimeTables.getStartTime());
             oldTimeTables.setEndTime(newTimeTables.getEndTime());
             oldTimeTables.setDayOfTheWeek(newTimeTables.getDayOfTheWeek());
+            oldTimeTables.setCourse(newTimeTables.getCourse());
 
             return timeTablesRepository.save(oldTimeTables);
             

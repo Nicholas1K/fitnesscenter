@@ -1,9 +1,9 @@
 package com.spring.fitnesscenter.model;
 
-import java.time.LocalDate;
+
 import java.util.List;
 
-import org.springframework.format.annotation.DateTimeFormat;
+
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -21,19 +21,14 @@ public class DayWeek {
     @Column
     private String day;
 
-    @Column
-    @DateTimeFormat(pattern = "yyyy-MM-dd")
-    private LocalDate currentDay;
-
     @ManyToMany
     private List<Course> courses;
 
     public DayWeek() {
     }
 
-    public DayWeek(String day, LocalDate currentDay, List<Course> courses) {
-        this.day = day;
-        this.currentDay = currentDay;
+    public DayWeek(String day, List<Course> courses) {
+        this.day = day; 
         this.courses = courses;
     }
 
@@ -53,13 +48,6 @@ public class DayWeek {
         this.day = day;
     }
 
-    public LocalDate getcurrentDay() {
-        return currentDay;
-    }
-
-    public void setcurrentDay(LocalDate currentDay) {
-        this.currentDay = currentDay;
-    }
 
     public List<Course> getCourses() {
         return courses;

@@ -9,6 +9,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.ManyToMany;
 
+
 @Entity
 public class TimeTables { // orari
     
@@ -25,13 +26,17 @@ public class TimeTables { // orari
     @ManyToMany
     private List<DayWeek> dayOfTheWeek;
 
+    @Column
+    private String courses;
+
     public TimeTables() {
     }
 
-    public TimeTables(String startTime, String endTime, List<DayWeek> dayOfTheWeek) {
+    public TimeTables(String startTime, String endTime, List<DayWeek> dayOfTheWeek, String courses) {
         this.startTime = startTime;
         this.endTime = endTime;
         this.dayOfTheWeek = dayOfTheWeek;
+        this.courses = courses;
     }
 
     public Long getId() {
@@ -65,6 +70,16 @@ public class TimeTables { // orari
     public void setDayOfTheWeek(List<DayWeek> dayOfTheWeek) {
         this.dayOfTheWeek = dayOfTheWeek;
     }
+    
+    public String getCourse() {
+        return courses;
+    }
+
+    public void setCourse(String courses) {
+        this.courses = courses;
+    }
+
+    
 
     @Override
     public String toString() {
