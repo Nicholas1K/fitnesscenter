@@ -11,7 +11,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.ManyToMany;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToOne;
 
 @Entity
 public class User {
@@ -24,7 +24,7 @@ public class User {
     private String firstName;
 
     @Column
-    private String LastName;
+    private String lastName;
 
     @Column
     @DateTimeFormat(pattern = "yyyy-MM-dd")
@@ -42,7 +42,7 @@ public class User {
     @ManyToMany
     private List<Course> course;
 
-    @ManyToOne
+    @OneToOne
     private Subscription subscription;
 
     public User() {
@@ -51,7 +51,7 @@ public class User {
     public User(String firstName, String lastName, LocalDate dateOfBirth, String fiscalCode, String telephoneNumber,
             String email, List<Course> course, Subscription subscription) {
         this.firstName = firstName;
-        LastName = lastName;
+        this.lastName = lastName;
         this.dateOfBirth = dateOfBirth;
         this.fiscalCode = fiscalCode;
         this.telephoneNumber = telephoneNumber;
@@ -77,11 +77,11 @@ public class User {
     }
 
     public String getLastName() {
-        return LastName;
+        return lastName;
     }
 
     public void setLastName(String lastName) {
-        LastName = lastName;
+        this.lastName = lastName;
     }
 
     public LocalDate getDateOfBirth() {
