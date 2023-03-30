@@ -40,7 +40,6 @@ public class DayAndTimeWorkService {
         DayAndTimeWork oldDay = findDayAndTimeWorkByID(newDayAndTimeWork.getId());
 
         if(oldDay != null){
-            oldDay.setCoruse(newDayAndTimeWork.getCoruse());
             oldDay.setPersonalTrainers(newDayAndTimeWork.getPersonalTrainers());
             oldDay.setTimeTables(newDayAndTimeWork.getTimeTables());
             
@@ -55,7 +54,6 @@ public class DayAndTimeWorkService {
         if (tempOldDay.isPresent()) {
             DayAndTimeWork oldDayAndTimeWork = tempOldDay.get();
 
-            oldDayAndTimeWork.setCoruse(newDayAndTimeWork.getCoruse());
             oldDayAndTimeWork.setPersonalTrainers(newDayAndTimeWork.getPersonalTrainers());
             oldDayAndTimeWork.setTimeTables(newDayAndTimeWork.getTimeTables());
 

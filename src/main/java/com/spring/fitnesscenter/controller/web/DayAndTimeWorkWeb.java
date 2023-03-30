@@ -60,7 +60,7 @@ public class DayAndTimeWorkWeb {
     public String updateDayAndTimeWork(@PathVariable Long id,@ModelAttribute("dayAndTimeWork") DayAndTimeWork dayAndTimeWork, Model model){
         DayAndTimeWork oldDayAndTimeWork = dayAndTimeWorkService.findDayAndTimeWorkByID(id);
         
-        oldDayAndTimeWork.setCoruse(dayAndTimeWork.getCoruse());
+
         oldDayAndTimeWork.setPersonalTrainers(dayAndTimeWork.getPersonalTrainers());
         oldDayAndTimeWork.setTimeTables(dayAndTimeWork.getTimeTables());
 

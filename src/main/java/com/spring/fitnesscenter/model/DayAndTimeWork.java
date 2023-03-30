@@ -16,8 +16,6 @@ public class DayAndTimeWork {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @ManyToMany
-    private List<Course> coruse;
 
     @ManyToMany
     private List<TimeTables> timeTables; //orari
@@ -28,8 +26,7 @@ public class DayAndTimeWork {
     public DayAndTimeWork() {
     }
 
-    public DayAndTimeWork(List<Course> coruse, List<TimeTables> timeTables, List<PersonalTrainer> personalTrainers) {
-        this.coruse = coruse;
+    public DayAndTimeWork(List<TimeTables> timeTables, List<PersonalTrainer> personalTrainers) {
         this.timeTables = timeTables;
         this.personalTrainers = personalTrainers;
     }
@@ -42,13 +39,6 @@ public class DayAndTimeWork {
         this.id = id;
     }
 
-    public List<Course> getCoruse() {
-        return coruse;
-    }
-
-    public void setCoruse(List<Course> coruse) {
-        this.coruse = coruse;
-    }
 
     public List<TimeTables> getTimeTables() {
         return timeTables;

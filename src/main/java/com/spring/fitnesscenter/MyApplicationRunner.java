@@ -13,6 +13,7 @@ import org.springframework.stereotype.Component;
 //import com.spring.fitnesscenter.model.PersonalTrainer;
 import com.spring.fitnesscenter.service.PersonalTrainerService;
 import com.spring.fitnesscenter.service.TimeTablesService;
+import com.spring.fitnesscenter.service.AddressService;
 //import com.spring.fitnesscenter.model.TimeTables;
 //import com.spring.fitnesscenter.model.Course;
 //import com.spring.fitnesscenter.model.DayWeek;
@@ -34,6 +35,9 @@ public class MyApplicationRunner implements CommandLineRunner {
     @Autowired
     TimeTablesService timeTablesService;
 
+    @Autowired
+    AddressService addressService;
+
     @Override
     public void run(String... args) throws Exception {
 
@@ -54,6 +58,8 @@ public class MyApplicationRunner implements CommandLineRunner {
                   TimeTables t1 = new TimeTables("12:00", "13:00", d1, c1);
 
                   timeTablesService.saveTimeTables(t1); */
+
+
 
     }
 
